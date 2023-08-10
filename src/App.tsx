@@ -1,13 +1,18 @@
 import Message from "./Message";
+import Alert from "./components/Alert";
 import ListGroup from "./components/ListGroup";
 
 function App() {
   let items = ["Lilongwe", "Blantyre", "Zomba", "Rumphi", "Nkhata Bay"];
+  let heading = "Cities (MW)";
 
-  //return <div><Message></Message></div>;
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
+
   return (
     <div>
-      <ListGroup items={items} heading={"Cities"} />
+      <Alert text="Hello World" />
     </div>
   );
 }
