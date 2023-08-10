@@ -1,19 +1,18 @@
 import { Fragment } from "react";
 function ListGroup() {
   let items = ["Lilongwe", "Blantyre", "Zomba", "Rumphi", "Nkhata Bay"];
-  items = [];
-
-  const getMessage = () => {
-    return items.length === 0 ? <p>No items found</p> : null;
-  };
 
   return (
     <>
       <h1>List</h1>
-      {getMessage()}
+      {items.length === 0 && <p>No items found</p>}
       <ul className="list-group">
-        {items.map((item) => (
-          <li className="list-group-item" key={item}>
+        {items.map((item, index) => (
+          <li
+            className="list-group-item"
+            key={item}
+            onClick={() => console.log(item, index)}
+          >
             {item}
           </li>
         ))}
