@@ -1,8 +1,31 @@
 import { Fragment } from "react";
 function ListGroup() {
-  const items = ["Lilongwe", "Blantyre", "Zomba", "Rumphi", "Nkhata Bay"];
+  let items = ["Lilongwe", "Blantyre", "Zomba", "Rumphi", "Nkhata Bay"];
+  items = [];
+  if (items.length === 0)
+    return (
+      <>
+        <h1>List</h1>
+        <p>No items found</p>
+      </>
+    );
 
-  /* 
+  return (
+    <>
+      <h1>List</h1>
+      <ul className="list-group">
+        {items.map((item) => (
+          <li className="list-group-item" key={item}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+export default ListGroup;
+/* 
 <li className="list-group-item">An item</li>
         <li className="list-group-item">A second item</li>
         <li className="list-group-item">A third item</li>
@@ -12,16 +35,3 @@ function ListGroup() {
           An active item
         </li>
 */
-  return (
-    <>
-      <h1>List</h1>
-      <ul className="list-group">
-        {items.map((item) => (
-          <li>{item}</li>
-        ))}
-      </ul>
-    </>
-  );
-}
-
-export default ListGroup;
