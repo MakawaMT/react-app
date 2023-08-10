@@ -11,9 +11,15 @@ function App() {
     console.log(item);
   };
 
+  const handleOnClick = () => {
+    return <Alert children="Show Up"></Alert>;
+  };
+
   return (
     <div>
-      <Button onClick={() => console.log("Clicked")}>World</Button>
+      <Button color="danger" onClick={() => console.log("Clicked")}>
+        World
+      </Button>
     </div>
   );
 }
