@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div>
-      <Button />
+      <Button onClick={() => console.log("Clicked")}>World</Button>
     </div>
   );
 }
